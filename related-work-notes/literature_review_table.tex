@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\title{Literature review notes}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}[left=0pt]
+  \item \textbf{Hi-GCN: A hierarchical graph convolution network for graph embedding learning of brain network and brain disorders prediction}
+  \begin{itemize}
+    \item \textbf{Authors:} Hao Jiang and Peng Cao and Ming Yi Xu and Jinzhu Yang and Osmar Zaiane
+    \item \textbf{Year:} 2020
+    \item \textbf{Task:} Classification
+    \item \textbf{Method:} GCN
+    \item \textbf{Important Notes:} Joint optimizing strategy for faster training and easier convergence.
+    \item \textbf{Summary:} Introduces a Hierarchical GCN (hi-GCN) model for learning deep representations from fMRI brain connectivity networks. The model has a two-level GCN architecture, capturing region-to-region brain activity correlations and subject-to-subject relationships simultaneously.
+    \item \textbf{Code:} \url{https://github.com/hao jiang1/hi-GCN}
+    \item \textbf{Accuracy:} 73.1
+  \end{itemize}
+
+  \item \textbf{Ensemble learning with 3D convolutional neural networks for functional connectome-based prediction}
+  \begin{itemize}
+    \item \textbf{Authors:} Meenakshi Khosla and Keith Jamison and Amy Kuceyeski and Mert R. Sabuncu
+    \item \textbf{Year:} 2019
+    \item \textbf{Task:} Classification
+    \item \textbf{Method:} 3D CNN
+    \item \textbf{Important Notes:} Testing impact of atlases used on results.
+    \item \textbf{Summary:} Evaluates the impact of brain parcellations on rs-fMRI data and proposes an ensemble learning strategy with a 3D CNN. The approach combines predictions from models trained on connectivity data with different parcellations, showcasing promising results for autism classification and age prediction.
+    \item \textbf{Code:} \url{https://github.com/mk2299/Ensemble3DCNN_connectomes}
+    \item \textbf{Accuracy:} 72.8
+  \end{itemize}
+
+  \item \textbf{Disease prediction using graph convolutional networks: Application to Autism Spectrum Disorder and Alzheimer’s disease}
+  \begin{itemize}
+    \item \textbf{Authors:} Sarah Parisot and Sofia Ira Ktena and Enzo Ferrante and Matthew Lee and Ricardo Guerrero and Ben Glocker and Daniel Rueckert
+    \item \textbf{Year:} 2018
+    \item \textbf{Task:} Classification
+    \item \textbf{Method:} GCN
+    \item \textbf{Important Notes:} Influence of the phenotypic graph structure on classification results. Same authors as the main paper. Deep sensitivity analysis: K, phenotype data used, feature selection methods (MLP, AE, PCA).
+    \item \textbf{Summary:} Extended version exploring GCNs for population analysis in medical imaging. Formulates subject classification as a graph labeling problem, integrating imaging and non-imaging data. Includes sensitivity analysis, new feature selection strategies, and comparison with baselines.
+    \item \textbf{Code:} \url{https://github.com/parisots/population-gcn}
+    \item \textbf{Accuracy:} 70.4
+  \end{itemize}
+
+  \item \textbf{ASD-DiagNet: A Hybrid Learning Approach for Detection of Autism Spectrum Disorder Using fMRI Data}
+  \begin{itemize}
+    \item \textbf{Authors:} Taban Eslami and Vahid Mirjalili and Alvis Fong and Angela R. Laird and Fahad Saeed
+    \item \textbf{Year:} 2019
+    \item \textbf{Task:} Classification
+    \item \textbf{Method:} AE
+    \item \textbf{Important Notes:} None provided
+    \item \textbf{Summary:} Proposes ASD-DiagNet for classifying subjects with ASD using only fMRI data. Utilizes joint learning with an autoencoder and a single-layer perceptron, along with a data augmentation strategy. Achieves improved quality of extracted features with reduced execution time.
+    \item \textbf{Code:} \url{https://github.com/pcdslab/ASD-DiagNet}
+    \item \textbf{Accuracy:} 70.3
+  \end{itemize}
+
+  \item \textbf{Automated Detection of Autism Spectrum Disorder Using a Convolutional Neural Network}
+  \begin{itemize}
+    \item \textbf{Authors:} Zeinab Sherkatghanad and Mohammadsadegh Akhondzadeh and Soorena Salari and Mariam Zomorodi-Moghadam and Moloud Abdar and U. Rajendra Acharya and Reza Khosrowabadi and Vahid Salari
+    \item \textbf{Year:} 2020
+    \item \textbf{Task:} Classification
+    \item \textbf{Method:} CNN
+    \item \textbf{Important Notes:} The CNN model developed used fewer parameters than state-of-the-art techniques and is hence computationally less intensive.
+    \item \textbf{Summary:} Focuses on automated detection of ASD using CNN with fMRI data. Classifies ASD and control subjects based on functional connectivity patterns. The CNN model is computationally less intensive and uses fewer parameters than state-of-the-art techniques.
+    \item \textbf{Code:} Not provided
+    \item \textbf{Accuracy:} 70
+  \end{itemize}
+
+  \item \textbf{Metric learning with spectral graph convolutions on brain connectivity networks}
+  \begin{itemize}
+    \item \textbf{Authors:} Sofia Ira Ktena and Sarah Parisot and Enzo Ferrante and Martin Rajchl and Matthew Lee and Ben Glocker and Daniel Rueckert
+    \item \textbf{Year:} 2018
+    \item \textbf{Task:} Classification
+    \item \textbf{Method:} GCN
+    \item \textbf{Important Notes:} Proposes a modification to the global loss function for better generalization.
+    \item \textbf{Summary:} Proposes a modification to the global loss function for better generalization in applications on heterogeneous data. Conducts extended validation on large databases, evaluating different loss functions and comparing the approach to alternative methods for similarity estimation.
+    \item \textbf{Code:} \url{https://github.com/sk1712/gcn_metric_learning}
+    \item \textbf{Accuracy:} 67
+  \end{itemize}
+
+  \item \textbf{Classification of autism spectrum disorder by combining brain connectivity and deep neural network classifier}
+  \begin{itemize}
+    \item \textbf{Authors:} Yazhou Kong and Jianliang Gao and Yunpei Xu and Yi Pan and Jianxin Wang and Jin Liu
+    \item \textbf{Year:} 2019
+    \item \textbf{Task:} Classification
+    \item \textbf{Method:} AE
+    \item \textbf{Important Notes:} None provided
+    \item \textbf{Summary:} Proposes an ASD aided diagnosis method based on a deep neural network classifier. Constructs individual networks for subjects, ranks features using F-score algorithm, and applies top-ranked features to a DNN classifier for effective ASD/TC classification.
+    \item \textbf{Code:} Not provided
+  \end{itemize}
+
+  \item \textbf{3D fully convolutional networks for subcortical segmentation in MRI: A large-scale study}
+  \begin{itemize}
+    \item \textbf{Authors:} Jose Dolz and Christian Desrosiers and Ismail Ben Ayed
+    \item \textbf{Year:} 2018
+    \item \textbf{Task:} Segmentation
+    \item \textbf{Method:} 3D CNN
+    \item \textbf{Important Notes:} Robustness to imaging protocols and parameters through preprocessing: volume-wise intensity normalization, bias field correction, and skull stripping.
+    \item \textbf{Summary:} Investigates a 3D CNN for subcortical brain structure segmentation in MRI. Addresses computational challenges using small kernels and embedding intermediate-layer outputs in the final prediction. The model is trained efficiently on a GPU and exhibits robustness to imaging protocols.
+  \end{itemize}
+
+\end{itemize}
+
+\end{document}

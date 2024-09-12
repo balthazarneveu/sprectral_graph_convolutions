@@ -1,0 +1,111 @@
+\documentclass[sigconf]{acmart}
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+\setcopyright{acmcopyright}
+\copyrightyear{2023}
+\acmYear{2023}
+% \acmDOI{XXXXXXX.XXXXXXX}
+
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[MVA 2023]{MVA 2023}{December
+  2023}{Paris, FR}
+
+% \acmPrice{15.00}
+% \acmISBN{978-1-4503-XXXX-X/18/06}
+
+\begin{document}
+
+%%
+%% TITLE
+\title{Review of Spectral Graph Convolutions for Population-based Disease Prediction}
+
+%%
+%% AUTHORS
+\author{Manal Akhannous}
+\affiliation{%
+  \institution{ENPC}
+  \streetaddress{Cité Descartes, 8 Av Blaise Pascal}
+  \city{Champs-sur-Marne}
+  \country{France}
+}
+\email{manal.akhannous@eleves.enpc.fr}
+
+\author{Ines Vati}
+\affiliation{%
+  \institution{ENPC}
+  \streetaddress{Cité Descartes, 8 Av Blaise Pascal 6 et}
+  \city{Champs-sur-Marne}
+  \country{France}
+}
+\email{ines.vati@eleves.enpc.fr}
+
+\author{Balthazar Neveu}
+\affiliation{%
+  \institution{ENS Paris-Saclay}
+  \city{Saclay}
+  \country{France}
+}
+\email{balthazar.neveu@ens-paris-saclay.fr}
+
+
+\renewcommand{\shortauthors}{MVA et al.}
+
+%% ABSTRACT
+\begin{abstract}
+  We'll review the paper Spectral Graph Convolutions for Population-based Disease Prediction \cite{Parisot17}
+\end{abstract}
+
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Graph, Spectral, Convolution, Medical, Disease}
+
+
+\received{10 December 2023}
+\received[revised]{10 December 2023}
+\received[accepted]{10 December 2023}
+
+%% TITLE
+\maketitle
+
+\section{Introduction}
+
+
+%% REVIEW MAIN DOCUMENT
+\cite{Parisot17}
+\section{Context analysis}
+
+\paragraph{} The studied paper presents a new method for disease prediction using the data available. The paper introduces Graph Convolutional Networks (GCN) as a technique for analyzing brain data in populations by integrating imaging and non-imaging data. The disease diagnosis problem is formulated as graph classification problem and proposes ...
+The main objective is to exploit the additional information available with the imaging data to incorporate similarities between subjects within a graph structure. In this representation, each subject is associated with an imaging feature vector and corresponds to a vertex in the graph. The edge weights of the graph are obtained from phenotypic data and encode the pairwise similarity between subjects. The GCN model is trained on partially labeled graphs to predict the classes of unlabeled nodes based on their features and associations with other subjects.
+
+\paragraph{} The proposed method has various applications. 
+It can be used for predicting diseases in cases where imaging data is utilized and the influence of phenotype information is significant. For example, diagnosing autism spectrum disorder (ASD) can be challenging since there is currently 
+no medical test available for diagnosis other than developmental screening. Leveraging the available fMRI scans can aid in the diagnosis and make early detection easier, ultimately improving the quality of life for patients. 
+This method can be generally applied to classify population graphs. 
+Resting state functional (rs-fMRI) %explain briefly
+It involves combining data from various sources of different types and representing populations as sparse graphs. In these graphs, vertices are associated with individual features, including imaging data, while edges encode informationabout the links between individuals. Integrating different data sources enhances the quality of predictions.
+
+\section{Related work}
+In recent years, several works have been published exploring different approaches for disease prediction for the case of the task of subject classification in populations (e.g. for diagnosis) with a focus on functional Magnetic Resonance Imaging (fMRI) data.
+
+One prevalent approach involved using convolutional neural networks have been proposed in the last few years based only on the imaging fMRI data. Dolz et al. \cite{Dolz2018} investigated a 3D CNN for subcortical brain structure segmentation in MRI. The proposed model addresses computational challenges using small kernels and embedding intermediate-layer outputs in the final prediction. Khosla et al.\cite{Khosla2019} evaluated the impact of the chosen brain parcellations on the performance of the 3D CNN model. They proposed an ensemble learning strategy that combines predictions from models trained on connectivity data with different parcellations that improved the classification accuracy. More recently, Sherkatghanad et al. developped a CNN model that used less parameters compared to state-of-the-art models making it less computationally expensive but showed competitive results on autism disorder detection.
+
+Other researchers, for instance \cite{Kong2019}, investigated the use of autoencoders as a way of extracting a small number of features before using a neural networks on these features to preform the classification task for autism disorder detection. ASD-DiagNet proposed by Eslami and al. \cite{Eslami2019} integrated a data augmentation strategy to further improve the robustness of this model.
+
+After Parisot at al. introduced graph convolutional networks as an approach for disease predicition, further works proposed some improvements to this approach. The same authors proposed a better loss function for better generalization, especially for heterogeneous data using metric learning. More recently, Jiang et al. \cite{Jiang2020} proposed a Hierarchical GCN (hi-GCN) model for learning deep representations from fMRI brain connectivity networks. The model has a two-level GCN architecture, capturing region-to-region brain activity correlations and subject-to-subject relationships simultaneously.
+
+These diverse approaches contribute to the evolving landscape of disease prediction using neural networks, offering insights into novel architectures, optimization strategies, and the integration of multi-modal data for improved accuracy and clinical relevance.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-sigconf.tex'.
